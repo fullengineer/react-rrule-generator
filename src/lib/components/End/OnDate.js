@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import 'moment/min/locales';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
 
 import { getTimeZoneAbbreviation } from '../../utils/timezone';
-import '../OnDate.css';
 
 const EndOnDate = ({
   onDate: {
@@ -17,7 +15,7 @@ const EndOnDate = ({
   const dateObj = new Date(Date.parse(date));
 
   return (
-    <div className="EndDatePicker">
+    <div className="EndDatePicker" style={{ position: 'relative' }}>
       <DatePicker
         timeInputLabel="Time:"
         dateFormat={date}
@@ -35,7 +33,7 @@ const EndOnDate = ({
           handleChange(editedEvent);
         }}
       />
-      <span className="EndDatePicker-timezone">{getTimeZoneAbbreviation(dateObj)}</span>
+      <span className="EndDatePicker-timezone" style={{ position: 'absolute', top: '8px', right: '-64px' }}>{getTimeZoneAbbreviation(dateObj)}</span>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Repeat = ({
   const isOptionSelected = option => frequency === option;
 
   return (
-    <div className="px-3">
+    <div className="RepeatPicker">
       <div className="form-group row">
         <div className="col-sm-2 text-sm-right">
           <label
