@@ -1,4 +1,4 @@
-@import 'react-datetime.css';
+@import "../../../node_modules/react-datepicker/dist/react-datepicker.min.css";
 
 .rdt .form-control {
   background-color: white;
@@ -6,4 +6,15 @@
 
 .opacity-50 {
   opacity: 0.5;
+}
+
+.react-datepicker-wrapper input {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d1d5db;
+  color: #111827;
+  padding: 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }

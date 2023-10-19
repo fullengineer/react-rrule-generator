@@ -1,0 +1,9 @@
+.EndDatePicker, .StartDatePicker{
+  position: relative;
+}
+
+.EndDatePicker-timezone, .StartDatePicker-timezone{
+  position: absolute;
+  top: 8px;
+  right: -64px;
+}

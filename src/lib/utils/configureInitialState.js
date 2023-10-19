@@ -2,7 +2,6 @@ import moment from 'moment';
 import { isEmpty, uniqueId } from 'lodash';
 
 import computeRRuleToString from './computeRRule/toString/computeRRule';
-import { DATE_TIME_FORMAT } from '../constants/index';
 
 const configureState = (config = {}, calendarComponent, id) => {
   const configureFrequency = () => (config.repeat ? config.repeat[0] : 'Yearly');
@@ -15,7 +14,7 @@ const configureState = (config = {}, calendarComponent, id) => {
   const data = {
     start: {
       onDate: {
-        date: moment().format(DATE_TIME_FORMAT),
+        date: moment().format('lll'),
         options: {
           weekStartsOnSunday: config.weekStartsOnSunday,
           calendarComponent,
@@ -82,7 +81,7 @@ const configureState = (config = {}, calendarComponent, id) => {
       mode: configureEnd(),
       after: 1,
       onDate: {
-        date: moment().format(DATE_TIME_FORMAT),
+        date: moment().format('lll'),
         options: {
           weekStartsOnSunday: config.weekStartsOnSunday,
           calendarComponent,

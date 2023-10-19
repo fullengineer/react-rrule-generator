@@ -1,6 +1,8 @@
 # React RRule Generator
 > Recurrence rules generator form built with React
 
+Instead of npm install, use `npm install --legacy-peer-deps`` or `npm install --force`
+
 [![LICENSE](https://img.shields.io/npm/l/express.svg)](LICENSE)
 [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://npm-stat.com/charts.html?package=react-rrule-generator)
 
@@ -25,7 +27,7 @@ https://fafruch.github.io/react-rrule-generator
 
 `npm install --save react-rrule-generator`
 
-## Usage 
+## Usage
 
 In your CSS index file don't forget to import styles:
 ```css
@@ -33,7 +35,7 @@ In your CSS index file don't forget to import styles:
 @import '~react-rrule-generator/build/styles.css'; // react-rrule-generator's custom CSS
 ```
 
-Then you're good to go.   
+Then you're good to go.
 Just use it:
 
 ```js
@@ -111,5 +113,5 @@ class ControlledRender extends Component {
 | **hideError** | `boolean` | If `true` error alert is not rendered. Default: `false` |
 | **weekStartsOnSunday** | `boolean` | If set to `true`, weeks starts on Sunday (both for views and RRule string). Default: `false` |
 
-## License 
+## License
 MIT
