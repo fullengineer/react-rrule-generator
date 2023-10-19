@@ -33,7 +33,7 @@ const StartOnDate = ({
           handleChange(editedEvent);
         }}
       />
-      <span className="StartDatePicker-timezone" style={{ position: 'absolute', top: '8px', right: '-64px' }}>{getTimeZoneAbbreviation(dateObj)}</span>
+      <span className="StartDatePicker-timezone" style={{ position: 'absolute', top: '10px', right: '-62px' }}>{getTimeZoneAbbreviation(dateObj)}</span>
     </div>
   );
 };
