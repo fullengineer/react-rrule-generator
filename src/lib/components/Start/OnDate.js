@@ -4,8 +4,6 @@ import moment from 'moment';
 import 'moment/min/locales';
 import DatePicker from 'react-datepicker';
 
-import { getTimeZoneAbbreviation } from '../../utils/timezone';
-
 const StartOnDate = ({
   onDate: {
     date,
@@ -33,7 +31,6 @@ const StartOnDate = ({
           handleChange(editedEvent);
         }}
       />
-      <span className="StartDatePicker-timezone" style={{ position: 'absolute', top: '10px', right: '-62px' }}>{getTimeZoneAbbreviation(dateObj)}</span>
     </div>
   );
 };
