@@ -24,7 +24,7 @@ const StartOnDate = ({
         value={date}
         onChange={(inputDate) => {
           const dateString = getDateString(inputDate);
-          const localMoment = moment(dateString, 'YYYY-MM-DD HH:mm:ss').utc().format('lll');
+          const localMoment = moment.utc(dateString, 'YYYY-MM-DD HH:mm:ss').format('lll');
           const editedEvent = {
             target: {
               value: localMoment,

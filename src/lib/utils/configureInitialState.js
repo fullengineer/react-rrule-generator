@@ -14,7 +14,7 @@ const configureState = (config = {}, calendarComponent, id) => {
   const data = {
     start: {
       onDate: {
-        date: moment().utc().format('lll'),
+        date: moment.utc().format('lll'),
         options: {
           weekStartsOnSunday: config.weekStartsOnSunday,
           calendarComponent,
@@ -81,7 +81,7 @@ const configureState = (config = {}, calendarComponent, id) => {
       mode: configureEnd(),
       after: 1,
       onDate: {
-        date: moment().utc().format('lll'),
+        date: moment.utc().format('lll'),
         options: {
           weekStartsOnSunday: config.weekStartsOnSunday,
           calendarComponent,
