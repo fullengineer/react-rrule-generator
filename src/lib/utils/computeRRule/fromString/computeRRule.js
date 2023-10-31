@@ -37,7 +37,7 @@ const computeRRule = (data, rrule) => {
       start: {
         ...data.start,
         onDate: {
-          date: moment(computeStartOnDate(data, rruleObj)).format('lll'),
+          date: moment(computeStartOnDate(data, rruleObj)).utc().format('lll'),
           options: {
             ...data.start.onDate.options,
             weekStartsOnSunday: computeWeekStartDay(data, rruleObj),
@@ -91,7 +91,7 @@ const computeRRule = (data, rrule) => {
         mode: computeEndMode(data, rruleObj),
         after: computeEndAfter(data, rruleObj),
         onDate: {
-          date: moment(computeEndOnDate(data, rruleObj)).format('lll'),
+          date: moment(computeEndOnDate(data, rruleObj)).utc().format('lll'),
           options: {
             ...data.end.onDate.options,
             weekStartsOnSunday: computeWeekStartDay(data, rruleObj),

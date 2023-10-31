@@ -4,6 +4,8 @@ import moment from 'moment';
 import 'moment/min/locales';
 import DatePicker from 'react-datepicker';
 
+import { getDateString } from '../../utils/timezone';
+
 const EndOnDate = ({
   onDate: {
     date,
@@ -21,9 +23,11 @@ const EndOnDate = ({
         selected={dateObj}
         value={date}
         onChange={(inputDate) => {
+          const dateString = getDateString(inputDate);
+          const localMoment = moment(dateString, 'YYYY-MM-DD HH:mm:ss').utc().format('lll');
           const editedEvent = {
             target: {
-              value: moment(inputDate).format('lll'),
+              value: localMoment,
               name: 'end.onDate.date',
             },
           };
